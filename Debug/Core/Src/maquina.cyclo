@@ -1,0 +1,4 @@
+../Core/Src/maquina.c:19:6:rotacion_productos	2
+../Core/Src/maquina.c:25:6:habilitar_mecanismo	1
+../Core/Src/maquina.c:31:16:MAQ_procesar_evento	8
+../Core/Src/maquina.c:66:16:iniciar_maquina	1
