@@ -15,7 +15,7 @@
 uint8_t producto[4] = {1, 2, 3, 4};
 uint8_t cantidad = sizeof(producto) / sizeof(producto[0]);
 uint8_t indice = 1;
-uint8_t flag_start = 0;
+volatile uint8_t flag_start = 0;
 
 void rotacion_productos(){
 	if (indice < cantidad){

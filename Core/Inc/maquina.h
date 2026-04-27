@@ -25,7 +25,7 @@ typedef enum {
 
 extern uint8_t producto[4];
 extern uint8_t indice;
-extern uint8_t flag_start;
+extern volatile uint8_t flag_start;
 
 
 Estado_maquina iniciar_maquina(void);

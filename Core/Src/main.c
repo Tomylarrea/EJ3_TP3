@@ -153,6 +153,7 @@ int main(void)
   {
     /* USER CODE END WHILE */
 	  if (flag_stop == 1){
+		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_6, GPIO_PIN_RESET);
 		  estado_actual = MAQ_procesar_evento(estado_actual, EVENTO_FIN_EXP);
 		  HAL_TIM_Base_Stop_IT(&htim1);
 		  flag_stop = 0;
