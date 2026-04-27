@@ -86,7 +86,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 					break;
 			}
 			contador++;
-		} else {flag_stop = 1;}
+		} else { contador = 0; flag_stop = 1;}
 	}
 }
 
@@ -153,6 +153,7 @@ int main(void)
   {
     /* USER CODE END WHILE */
 	  if (flag_stop == 1){
+		  estado_actual = MAQ_procesar_evento(estado_actual, EVENTO_FIN_EXP);
 		  HAL_TIM_Base_Stop_IT(&htim1);
 		  flag_stop = 0;
 	  }

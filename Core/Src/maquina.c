@@ -66,7 +66,6 @@ Estado_maquina MAQ_procesar_evento(Estado_maquina actual, Evento_maquina evento)
 /* Initialize FSM */
 Estado_maquina iniciar_maquina(void) {
     Estado_maquina inicial = ESTADO_SELECCION;
-    rotacion_productos();
     return inicial;
 }/*
  * maquina.c
