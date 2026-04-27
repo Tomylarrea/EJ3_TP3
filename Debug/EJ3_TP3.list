@@ -37,11 +37,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  000167ef  00000000  00000000  0000d7f1  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0000a17e  00000000  00000000  00023fe0  2**0
+ 17 .debug_line   0000a180  00000000  00000000  00023fe0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00084398  00000000  00000000  0002e15e  2**0
+ 18 .debug_str    00084398  00000000  00000000  0002e160  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  000b24f6  2**0
+ 19 .comment      00000043  00000000  00000000  000b24f8  2**0
                   CONTENTS, READONLY
  20 .debug_frame  000024d4  00000000  00000000  000b253c  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -294,11 +294,11 @@ int main(void)
  8000282:	f000 f9a6 	bl	80005d2 <iniciar_maquina>
  8000286:	4603      	mov	r3, r0
  8000288:	71fb      	strb	r3, [r7, #7]
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
 	  if (flag_stop == 1){
  800028a:	4b20      	ldr	r3, [pc, #128]	@ (800030c <main+0xa0>)
  800028c:	781b      	ldrb	r3, [r3, #0]
@@ -529,9 +529,9 @@ static void MX_TIM1_Init(void)
  80003da:	4b1c      	ldr	r3, [pc, #112]	@ (800044c <MX_TIM1_Init+0x9c>)
  80003dc:	2200      	movs	r2, #0
  80003de:	609a      	str	r2, [r3, #8]
-  htim1.Init.Period = 1999;
+  htim1.Init.Period = 999;
  80003e0:	4b1a      	ldr	r3, [pc, #104]	@ (800044c <MX_TIM1_Init+0x9c>)
- 80003e2:	f240 72cf 	movw	r2, #1999	@ 0x7cf
+ 80003e2:	f240 32e7 	movw	r2, #999	@ 0x3e7
  80003e6:	60da      	str	r2, [r3, #12]
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
  80003e8:	4b18      	ldr	r3, [pc, #96]	@ (800044c <MX_TIM1_Init+0x9c>)
